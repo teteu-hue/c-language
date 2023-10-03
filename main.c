@@ -31,11 +31,12 @@ int main(int argc, char *argv[]) {
 */
 
 double multiplica(int num1, int num2){
-	if(num1 == 0 || num2 == 0){
-		return 0;
-	}
+	double resultado = 1;
 	
-	double resultado;
+	if(num1 == 0 || num2 == 0){
+		resultado = 0;
+		return resultado;
+	}
 	
 	printf("Digite o primeiro número que deseja multiplicar\n");
 	scanf("%d", &num1);
@@ -46,9 +47,50 @@ double multiplica(int num1, int num2){
 	
 }
 
+double divisao(int num1, int num2){
+	double resultado;
+	
+	if(num1 == 0 || num2 == 0){
+		resultado = 0;
+		return resultado;
+	}
+	
+	printf("Digite o primeiro número que deseja dividir\n");
+	scanf("%d", &num1);
+	printf("Digite o segundo número que deseja dividir\n");
+	scanf("%d", &num2);
+	resultado = num1 / num2;
+	return(resultado);
+	
+}
+
+int soma(int num1, int num2){
+	int resultado;
+	
+	printf("Digite o primeiro número que deseja dividir\n");
+	scanf("%d", &num1);
+	printf("Digite o segundo número que deseja dividir\n");
+	scanf("%d", &num2);
+	resultado = num1 + num2;
+	return(resultado);
+	
+}
+
+int soma(int num1, int num2){
+	int resultado;
+	
+	printf("Digite o primeiro número que deseja dividir\n");
+	scanf("%d", &num1);
+	printf("Digite o segundo número que deseja dividir\n");
+	scanf("%d", &num2);
+	resultado = num1 + num2;
+	return(resultado);
+	
+}
+
 int main(int argc, char *argv[]){
 	int opcao = 10;
-	int num1, num2, resultado;
+	int num1=1, num2=2, resultado;
 	printf("Bem vindo a calculadora do teteu!\n");
 	
 	while (opcao != 0){
@@ -65,7 +107,7 @@ int main(int argc, char *argv[]){
 		switch(opcao){
 			case 1:
 				resultado = multiplica(num1, num2);
-				printf("O resultado da multiplicação e: %d", resultado);
+				printf("O resultado da multiplicação e: %d\n", resultado);
 			break;
 			
 			case 2:
