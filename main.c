@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
 }
 */
 
-double multiplica(int num1, int num2){
+double multiplicar(int num1, int num2){
 	double resultado = 1;
 	
 	if(num1 == 0 || num2 == 0){
@@ -47,7 +47,7 @@ double multiplica(int num1, int num2){
 	
 }
 
-double divisao(int num1, int num2){
+double dividir(int num1, int num2){
 	double resultado;
 	
 	if(num1 == 0 || num2 == 0){
@@ -64,26 +64,26 @@ double divisao(int num1, int num2){
 	
 }
 
-int soma(int num1, int num2){
+int somar(int num1, int num2){
 	int resultado;
 	
-	printf("Digite o primeiro número que deseja dividir\n");
+	printf("Digite o primeiro número que deseja somar\n");
 	scanf("%d", &num1);
-	printf("Digite o segundo número que deseja dividir\n");
+	printf("Digite o segundo número que deseja somar\n");
 	scanf("%d", &num2);
 	resultado = num1 + num2;
 	return(resultado);
 	
 }
 
-int soma(int num1, int num2){
+int subtrair(int num1, int num2){
 	int resultado;
 	
-	printf("Digite o primeiro número que deseja dividir\n");
+	printf("Digite o primeiro número que deseja subtrair\n");
 	scanf("%d", &num1);
-	printf("Digite o segundo número que deseja dividir\n");
+	printf("Digite o segundo número que deseja subtrair\n");
 	scanf("%d", &num2);
-	resultado = num1 + num2;
+	resultado = num1 - num2;
 	return(resultado);
 	
 }
@@ -106,20 +106,23 @@ int main(int argc, char *argv[]){
 		
 		switch(opcao){
 			case 1:
-				resultado = multiplica(num1, num2);
-				printf("O resultado da multiplicação e: %d\n", resultado);
+				resultado = multiplicar(num1, num2);
+				printf("O resultado da multiplicacao e: %d\n", resultado);
 			break;
 			
 			case 2:
-			
+				resultado = dividir(num1, num2);
+				printf("O resultado da divisao e: %d\n", resultado);
 			break;
-			
-			case 3:
 				
+			case 3:
+				resultado = subtrair(num1, num2);
+				printf("O resultado da subtracao e: %d\n", resultado);
 			break;
 			
 			case 4: 
-			
+				resultado = somar(num1, num2);
+				printf("O resultado da soma e: %d\n", resultado);
 			break;
 		}
 	}
