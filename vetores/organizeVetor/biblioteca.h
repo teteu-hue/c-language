@@ -1,6 +1,6 @@
 #include <stdbool.h>
 
-int * sortArray(int array[]){
+int sortArray(int array[]){
 	int tamanhoArr = sizeof(array) / sizeof(array[0]);
 	int i;
 	
