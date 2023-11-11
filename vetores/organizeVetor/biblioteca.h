@@ -1,7 +1,6 @@
 #include <stdbool.h>
 
-int sortArray(int array[]){
-	int tamanhoArr = sizeof(array) / sizeof(array[0]);
+int * sortArray(int array[], int tamanhoArray){
 	int i;
 	
 	bool isOrdened = true;
@@ -9,7 +8,7 @@ int sortArray(int array[]){
 	while(isOrdened){
 
 	isOrdened = false;
-	for(i = 0; i < tamanhoArr; i++){
+	for(i = 0; i < tamanhoArray; i++){
 
 		if(array[i] > array[i+1]){
 			isOrdened = true;
@@ -17,5 +16,18 @@ int sortArray(int array[]){
 			array[i] = array[i+1];
 			array[i+1] = temp;
 		}
+	 }
+	}
 	return array;
+}
+
+void imprime(int array[], int tamanhoArray){
+	int i;
+
+	printf("[");
+	for(i = 0; i < tamanhoArray; i++){
+		printf("%d, ",array[i]);
+	}
+	printf("]\n");
+
 }
