@@ -1,8 +1,8 @@
 #include <stdbool.h>
 
-int * sortArray(int array[], int tamanhoArray){
-	int i;
+void sortArray(int array[], int tamanhoArray){
 	
+	int i;	
 	bool isOrdened = true;
 
 	while(isOrdened){
@@ -18,7 +18,6 @@ int * sortArray(int array[], int tamanhoArray){
 		}
 	 }
 	}
-	return array;
 }
 
 void imprime(int array[], int tamanhoArray){
