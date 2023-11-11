@@ -1,36 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
+#include "biblioteca.h"
 
 void main(){
 	
-	int array[10];
-	int tamanhoArr = sizeof(array) / sizeof(array[0]);
+	int tamanhoArray = 10;
+	int array[tamanhoArray];
 	int i;
 
-	for(i = 0; i < tamanhoArr;i++){
-		scanf("%d\n", &array[i]);
+	for(i = 0; i < tamanhoArray;i++){
+		scanf("%d", &array[i]);
 	}
 
-	bool isOrdened = true;
+	printf("\n");
 
-	while(isOrdened){
-
-	isOrdened = false;
-	for(i = 0; i < tamanhoArr; i++){
-
-		if(array[i] > array[i+1]){
-			isOrdened = true;
-			int temp = array[i];
-			array[i] = array[i+1];
-			array[i+1] = temp;
-		}
-	 }
-	}
+	sortArray(array, tamanhoArray);
 
 	printf("[");
 
-	for(i = 0; i < tamanhoArr; i++){
+	for(i = 0; i < tamanhoArray; i++){
 		printf("%d, ", array[i]);
 	}
 

@@ -1,15 +1,14 @@
 #include <stdbool.h>
 
-int sortArray(int array[]){
-	int tamanhoArr = sizeof(array) / sizeof(array[0]);
-	int i;
+void sortArray(int array[], int tamanhoArray){
 	
+	int i;	
 	bool isOrdened = true;
 
 	while(isOrdened){
 
 	isOrdened = false;
-	for(i = 0; i < tamanhoArr; i++){
+	for(i = 0; i < tamanhoArray; i++){
 
 		if(array[i] > array[i+1]){
 			isOrdened = true;
@@ -17,5 +16,6 @@ int sortArray(int array[]){
 			array[i] = array[i+1];
 			array[i+1] = temp;
 		}
-	return array;
+	 }
+	}
 }
