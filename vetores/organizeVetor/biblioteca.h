@@ -20,7 +20,7 @@ void sortArray(int array[], int tamanhoArray){
 	}
 }
 
-void imprime(int array[], int tamanhoArray){
+void printArray(int array[], int tamanhoArray){
 	int i;
 
 	printf("[");
@@ -28,5 +28,15 @@ void imprime(int array[], int tamanhoArray){
 		printf("%d, ",array[i]);
 	}
 	printf("]\n");
+
+}
+
+void insertValues(int array[], int size_array){
+	int i;
+
+	for(i = 0; i < size_array; i++){
+		scanf("%d", &array[i]);
+	}
+	printf("\n");
 
 }
