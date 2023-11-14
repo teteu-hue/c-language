@@ -7,12 +7,8 @@ void main(){
 	int tamanhoArray = 10;
 	int array[tamanhoArray];
 
-	for(i = 0; i < tamanhoArray;i++){
-		scanf("%d", &array[i]);
-	}
 
-	printf("\n");
-
+	insertValues(array, tamanhoArray);
 	sortArray(array, tamanhoArray);
 	printArray(array, tamanhoArray);
 }
